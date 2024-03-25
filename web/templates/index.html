@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FunFox</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="container-fluid">
+    <section id="main-section">
+        <div class="slide-container">
+            <div class="slide">
+                <h1 class="upper_heading">Elements of Story Writing</h1>
+                <p class="description_1">
+                    Welcome to term 2 of Writers Club. Are you excited for this amazing journey?
+                    Over the next week, we will be practicing the different elements of story writing.
+                    Our
+                    aim is to make stories more interesting and exciting.
+                </p>
+                <p class="description_2">
+                    There are elements which make the foundation for story writing. An element is an essential part of
+                    something and every fiction story has the same key elements:
+                </p>
+                <div style="display: flex; align-items: center; justify-content: space-around">
+                    <div class="cloud_div">
+                        <img src="{% static 'images/setting_cloud.svg' %}">
+                    </div>
+                    <div class="cloud_div">
+                        <img src="{% static 'images/characterstics_cloud.svg' %}">
+                    </div>
+                    <div class="cloud_div">
+                        <img src="{% static 'images/plot.svg' %}">
+                    </div>
+                    <div class="cloud_div">
+                        <img src="{% static 'images/problem.svg' %}">
+                    </div>
+                    <div class="cloud_div">
+                        <img src="{% static 'images/resolution.svg' %}">
+                    </div>
+                </div>
+                <p class="description_1">
+                    You must be familiar with some of these. If not, do not worry! we will cover all these elements as
+                    we go
+                    along.
+                </p>
+                <div class="slide_1_element">
+                    <p class="slide_1_text">
+                        For today’s lesson, we will try to understand and practice writing the setting for our stories.
+
+                    </p>
+                    <p class="slide_2_text">
+                        The setting is an important element of every fiction story.
+                    </p>
+                </div>
+            </div>
+            <div class="slide">
+                <h1 class="slide_2_heading">Can you figure out the definition of setting from the following examples?
+                </h1>
+                <p class="slide_2_p">(take a minute to think about this)</p>
+                <div class="row d-flex justify-content-center align-items-baseline">
+                    <div class="col-6 d-flex justify-content-center align-items-center">
+                        <div>
+                            <div class="slide_2_guess">
+                                <img src="{% static 'images/sunny_day.svg' %}">
+                            </div>
+                            <h1 class="guess_text">Sunny day at a beach</h1>
+                        </div>
+                    </div>
+                    <div class="col-6 d-flex justify-content-center align-items-center">
+                        <div>
+                            <div class="slide_2_guess">
+                                <img src="{% static 'images/sunny_day.svg' %}">
+                            </div>
+                            <h1 class="guess_text">A cold rainy night in a<br>
+                                haunted house in October</h1>
+                        </div>
+                    </div>
+                    <p class="slide_2_p_1">So, what do you think the definition of setting is?</p>
+                    <div class="row guess_row" style="margin-top: 30px">
+                        <div class="col-2 d-flex align-items-center">
+                            <p class="slide_2_p_1">Any guesses?</p>
+                        </div>
+                        <div class="col-8 guess">
+                            <input type="text" class="input-with-line">
+                        </div>
+                        <div class="col-2 d-flex align-items-center">
+                            <p class="slide_2_p_1">Hint: <img src="{% static 'images/clock.svg' %}"> <img
+                                    src="{% static 'images/home.svg' %}"></p>
+                        </div>
+                    </div>
+                    <p class="description_2" style="margin-top: 20px">
+                        Setting is the time <img src="{% static 'images/clock.svg' %}"> and place <img
+                            src="{% static 'images/home.svg' %}">of a story. It often answers the questions: when? and
+                        where?
+                    </p>
+                    <p class="slide_2_p_1">The time of the story could be in the past, future, day, night, summer or
+                        winter.
+                        A story may take place in a school, a mall, a desert, an airplane or in a variety
+                        of other places.</p>
+
+                </div>
+
+            </div>
+            <!-- Add more slides as needed -->
+
+            <!-- Slide buttons -->
+            <div class="button-main-div row">
+                <div class="col-2" style="display: flex; justify-content: start; align-items: center"><img
+                        src="{% static 'images/support.svg' %}"></div>
+                <div class="slide-buttons col-8">
+                    <button onclick="changeSlide(0)"><img src="{% static 'images/left.svg' %}"></button>
+                    <div class="slide-number"><h1 id="slide-number">1</h1>
+                        <div class="drop_down_div"><img src="{% static 'images/dropdown.svg' %}"></div>
+                    </div>
+                    <button onclick="changeSlide(1)"><img src="{% static 'images/right.svg' %}"></button>
+                    <!-- Add more buttons as needed -->
+                </div>
+                <div class="col-2" style="display: flex; justify-content: end; align-items: center"><img
+                        src="{% static 'images/information.svg' %}"></div>
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideNumber = document.getElementById('slide-number');
+    const mainSection = document.getElementById('main-section');
+
+    function showSlide(slideIndex) {
+        if (slideIndex >= slides.length) {
+            slideIndex = 0;
+        } else if (slideIndex < 0) {
+            slideIndex = slides.length - 1;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+        slides[slideIndex].style.display = 'block';
+        currentSlide = slideIndex;
+        slideNumber.textContent = `${currentSlide + 1}`;
+
+        // Change background based on slide index
+        if (currentSlide === 0) {
+            mainSection.style.backgroundImage = 'url("{% static 'images/background.svg' %}")';
+        } else {
+            mainSection.style.backgroundImage = 'url("{% static 'images/slide_2_background.svg' %}")'; // Replace "slide_2_background" with the actual background image URL or path
+        }
+    }
+
+    function changeSlide(index) {
+        showSlide(index);
+    }
+
+    showSlide(currentSlide);
+
+</script>
+
+</body>
+</html>
